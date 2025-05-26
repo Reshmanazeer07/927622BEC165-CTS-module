@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercise 4</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        ul {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Todo List</h2>
+
+    <input type="text" id="itemInput" placeholder="Enter item">
+    <button id="addBtn">Add Item</button>
+    <button id="removeAllBtn">Remove All</button>
+
+    <ul id="itemList"></ul>
+
+    <script>
+        $(document).ready(function() {
+            // Add item
+            $("#addBtn").click(function() {
+                let inputValue = $("#itemInput").val().trim();
+
+                if (inputValue !== "") {
+                    let newItem = $("<li></li>").text(inputValue);
+                    $("#itemList").append(newItem);
+                    $("#itemInput").val(""); // clear input
+                } else {
+                    alert("Please enter a value.");
+                }
+            });
+
+            // Remove all items
+            $("#removeAllBtn").click(function() {
+                $("#itemList").empty();
+            });
+        });
+    </script>
+
+</body>
+</html>

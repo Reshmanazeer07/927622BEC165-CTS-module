@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 12.2 - Pricing Section</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <style>
+    .pricing-card {
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+    .pricing-card:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h2 class="text-center mb-5">Our Pricing Plans</h2>
+
+    <div class="row g-4">
+      <!-- Basic Plan -->
+      <div class="col-md-4">
+        <div class="pricing-card p-4 text-center">
+          <h4 class="mb-3">Basic</h4>
+          <h2 class="mb-4">$9<span class="fs-6">/mo</span></h2>
+          <ul class="list-unstyled mb-4">
+            <li>1 User</li>
+            <li>10 Projects</li>
+            <li>Email Support</li>
+          </ul>
+          <button class="btn btn-outline-primary w-100">Choose Plan</button>
+        </div>
+      </div>
+
+      <!-- Standard Plan -->
+      <div class="col-md-4">
+        <div class="pricing-card p-4 text-center">
+          <h4 class="mb-3">Standard</h4>
+          <h2 class="mb-4">$29<span class="fs-6">/mo</span></h2>
+          <ul class="list-unstyled mb-4">
+            <li>5 Users</li>
+            <li>50 Projects</li>
+            <li>Priority Support</li>
+          </ul>
+          <button class="btn btn-primary w-100">Choose Plan</button>
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="col-md-4">
+        <div class="pricing-card p-4 text-center">
+          <h4 class="mb-3">Premium</h4>
+          <h2 class="mb-4">$99<span class="fs-6">/mo</span></h2>
+          <ul class="list-unstyled mb-4">
+            <li>Unlimited Users</li>
+            <li>Unlimited Projects</li>
+            <li>24/7 Support</li>
+          </ul>
+          <button class="btn btn-outline-dark w-100">Choose Plan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

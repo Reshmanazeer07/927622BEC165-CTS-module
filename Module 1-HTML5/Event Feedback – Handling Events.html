@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Feedback</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+        input, textarea, select {
+            margin: 8px 0;
+            padding: 6px;
+            width: 300px;
+        }
+        .char-count {
+            font-size: 0.9em;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Event Feedback Form</h2>
+
+    <form>
+        <label>Name:</label><br>
+        <input type="text" id="name" onblur="checkName(this)">
+        <br><br>
+
+        <label>Email:</label><br>
+        <input type="email" id="email" onchange="checkEmail(this)">
+        <br><br>
+
+        <label>Rate the Event:</label><br>
+        <select id="rating" onchange="showRating(this.value)">
+            <option value="">-- Select --</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Good">Good</option>
+            <option value="Average">Average</option>
+            <option value="Poor">Poor</option>
+        </select>
+        <br><br>
+
+        <label>Comments:</label><br>
+        <textarea id="comments" rows="4" onkeyup="countChars(this)"></textarea><br>
+        <span id="charCount" class="char-count">Characters: 0</span>
+        <br><br>
+
+        <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+    </form>
+
+    <script>
+        function checkName(input) {
+            if (input.value.trim() === '') {
+                alert("Please enter your name.");
+            }
+        }
+
+        function checkEmail(input) {
+            if (!input.value.includes('@')) {
+                alert("Invalid email address.");
+            }
+        }
+
+        function showRating(value) {
+            if (value) {
+                alert("You rated the event: " + value);
+            }
+        }
+
+        function countChars(el) {
+            document.getElementById("charCount").textContent = "Characters: " + el.value.length;
+        }
+
+        function submitFeedback() {
+            const name = document.getElementById("name").value;
+            const rating = document.getElementById("rating").v
+
+

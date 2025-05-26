@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 16.1 - Fixed Footer</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-bottom: 60px; /* Prevent content from hiding behind the footer */
+    }
+    footer {
+      height: 60px;
+      line-height: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h2>Main Content</h2>
+    <p>This is the main content of the page. Scroll down to see the fixed footer at the bottom of the viewport.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur nisl at libero blandit, nec hendrerit arcu malesuada.</p>
+  </div>
+
+  <!-- ✅ Fixed Footer -->
+  <footer class="bg-dark text-white text-center position-fixed bottom-0 start-0 w-100">
+    &copy; 2025 My Website - All rights reserved.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercise 3 with Content</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .box {
+            width: 120px;
+            height: 120px;
+            margin: 10px;
+            background-color: skyblue;
+            display: inline-block;
+            text-align: center;
+            padding-top: 20px;
+            border-radius: 10px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <p>Box 1</p>
+        <button>Click</button>
+    </div>
+    <div class="box">
+        <p>Box 2</p>
+        <button>Click</button>
+    </div>
+    <div class="box">
+        <p>Box 3</p>
+        <button>Click</button>
+    </div>
+
+    <br><br>
+
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <button id="fadeOutBtn">Fade Out</button>
+    <button id="fadeInBtn">Fade In</button>
+    <button id="toggleBtn">Toggle</button>
+    <button id="chainBtn">Chain (slideUp → delay → slideDown)</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#hideBtn").click(function() {
+                $(".box").hide();
+            });
+
+            $("#showBtn").click(function() {
+                $(".box").show();
+            });
+
+            $("#fadeOutBtn").click(function() {
+                $(".box").fadeOut();
+            });
+
+            $("#fadeInBtn").click(function() {
+                $(".box").fadeIn();
+            });
+
+            $("#toggleBtn").click(function() {
+                $(".box").toggle();
+            });
+
+            $("#chainBtn").click(function() {
+                $(".box").slideUp().delay(1000).slideDown();
+            });
+        });
+    </script>
+
+</body>
+</html>
+

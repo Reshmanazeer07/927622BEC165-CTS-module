@@ -1,0 +1,27 @@
+<style>
+  .responsive-header {
+    font-size: 28px;
+    color: darkblue;
+    text-align: center;
+    margin: 20px;
+  }
+  .responsive-img {
+    width: 70%;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  @media screen and (max-width: 768px) {
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+    }
+    .responsive-header {
+      font-size: 18px;
+    }
+    .responsive-img {
+      width: 100%;
+    }
+  }
+</style>
+<h2 class="responsive-header">Responsive Design Example</h2>
+<img class="responsive-img" src="https://via.placeholder.com/600x300" alt="Sample Event Banner">

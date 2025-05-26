@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Save Event Preference</title>
+</head>
+<body>
+
+    <h3>Select Your Preferred Event Type:</h3>
+
+    <select id="eventType" onchange="savePreference(this.value)">
+        <option value="Music">Music</option>
+        <option value="Tech">Tech</option>
+    </select>
+
+    <button onclick="clearPreferences()">Clear Preferences</button>
+
+    <p id="message"></p>
+
+    <script>
+        function savePreference(val) {
+            localStorage.setItem('preferredEvent', val);
+            document.getElementById('message').innerText = "✅ Preference saved: " + val;
+        }
+
+        window.onload = function() {
+            let saved = localStorage.getItem('preferredEvent');
+            if (saved) {
+                document.getElementById('eventType').value = saved;
+                document.getElementById('message').innerText = "🎯 Loaded preference: " + saved;
+            }
+        }
+
+        function clearPreferences() {
+            localStorage.clear();
+            sessionStorage.clear();
+            document.getElementById('message').innerText = "❌ Preferences cleared.";
+        }
+    </script>
+
+</body>
+</html>

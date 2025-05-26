@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 8px 16px;
+        }
+        output {
+            display: block;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Event Registration Form</h2>
+
+    <form onsubmit="confirmRegistration(event)">
+        <label>
+            Name:
+            <input type="text" placeholder="Your Name" required autofocus>
+        </label>
+
+        <label>
+            Email:
+            <input type="email" required>
+        </label>
+
+        <label>
+            Date:
+            <input type="date">
+        </label>
+
+        <label>
+            Event Type:
+            <select required>
+                <option value="">-- Select --</option>
+                <option>Workshop</option>
+                <option>Seminar</option>
+            </select>
+        </label>
+
+        <label>
+            Message:
+            <textarea placeholder="Any message or question..."></textarea>
+        </label>
+
+        <button type="submit">Register</button>
+
+        <output id="confirmationMessage"></output>
+    </form>
+
+    <script>
+        function confirmRegistration(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+            document.getElementById("confirmationMessage").textContent = "✅ Your registration is confirmed!";
+        }
+    </script>
+
+</body>
+</html>
+

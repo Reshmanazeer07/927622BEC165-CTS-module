@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercise 6</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #eventBox {
+            width: 300px;
+            height: 150px;
+            background-color: lightgray;
+            border: 2px solid #444;
+            text-align: center;
+            line-height: 150px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        input {
+            margin-top: 20px;
+            padding: 8px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Event Demo</h2>
+
+    <div id="eventBox">Hover or Click Me</div>
+
+    <input type="text" id="keyInput" placeholder="Type something...">
+
+    <script>
+        $(document).ready(function() {
+            // Click event
+            $("#eventBox").click(function() {
+                $(this).text("Clicked!");
+                $(this).css("background-color", "#ffd966");
+            });
+
+            // Double-click event
+            $("#eventBox").dblclick(function() {
+                $(this).text("Double Clicked!");
+                $(this).css("background-color", "#f66");
+            });
+
+            // Mouseenter and mouseleave
+            $("#eventBox").mouseenter(function() {
+                $(this).css("background-color", "#d9ead3");
+                $(this).text("Mouse Enter");
+            });
+
+            $("#eventBox").mouseleave(function() {
+                $(this).css("background-color", "lightgray");
+                $(this).text("Mouse Leave");
+            });
+
+            // Keypress on input field
+            $("#keyInput").keypress(function(event) {
+                alert("Key pressed: " + event.key);
+            });
+        });
+    </script>
+
+</body>
+</html>

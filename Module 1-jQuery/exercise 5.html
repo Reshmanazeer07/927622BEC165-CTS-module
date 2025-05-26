@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercise 5</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border: 2px solid #333;
+            margin-top: 20px;
+        }
+
+        #colorBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="colorBtn">Change Color</button>
+    <div id="colorBox"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Single click: change background to red
+            $("#colorBtn").click(function() {
+                $("#colorBox").css("background-color", "red");
+            });
+
+            // Double-click: change background back to white
+            $("#colorBtn").dblclick(function() {
+                $("#colorBox").css("background-color", "white");
+            });
+        });
+    </script>
+
+</body>
+</html>

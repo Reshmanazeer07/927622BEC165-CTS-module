@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debugging Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 5px 0;
+            width: 200px;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Debugging with Chrome DevTools</h2>
+    <p>Open Chrome DevTools (F12 or Right-click → Inspect → Console tab) to view logs.</p>
+
+    <label for="num">Enter a number:</label><br>
+    <input id="num" type="number" placeholder="e.g., 5"><br>
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+
+    <script>
+        console.log("Debugging active"); // This log shows when the page loads
+
+        function calculate() {
+            let val = document.getElementById("num").value;
+            console.log("Raw input value:", val);
+            console.log("Type of input value:", typeof val);
+
+            if (val === "") {
+                console.warn("No value entered");
+                document.getElementById("result").innerText = "⚠️ Please enter a number.";
+                return;
+            }
+
+            let number = parseFloat(val);
+            if (isNaN(number)) {
+                console.error("Invalid number");
+                document.getElementById("result").innerText = "❌ Invalid number entered.";
+                return;
+            }
+
+            let result = number * 2;
+            console.log("Calculated result:", result);
+
+            document.getElementById("result").innerText = `✅ Result: ${result}`;
+        }
+    </script>
+
+</body>
+</html>

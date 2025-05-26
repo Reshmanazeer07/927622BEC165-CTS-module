@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 6.2 - Card with Flex Utilities</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <style>
+    .card-custom {
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card card-custom shadow p-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <img src="https://via.placeholder.com/60" alt="Avatar" class="avatar me-3">
+          <div>
+            <h5 class="mb-0">John Doe</h5>
+            <small class="text-muted">Web Developer</small>
+          </div>
+        </div>
+        <button class="btn btn-primary">Follow</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

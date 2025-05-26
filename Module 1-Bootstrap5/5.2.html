@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 5.2 - Column Reordering</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <style>
+    .box {
+      padding: 40px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+    }
+    .box-1 {
+      background-color: #0d6efd; /* Blue */
+    }
+    .box-2 {
+      background-color: #198754; /* Green */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-4">
+    <div class="row">
+      <!-- This will appear second on md and up -->
+      <div class="col-md-6 order-md-2 box box-1">
+        Column 1 (order-md-2)
+      </div>
+
+      <!-- This will appear first on md and up -->
+      <div class="col-md-6 order-md-1 box box-2">
+        Column 2 (order-md-1)
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 14.1 - Responsive Visibility</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <style>
+    .box {
+      padding: 20px;
+      margin-bottom: 15px;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h3 class="mb-4">Responsive Display Utilities</h3>
+
+    <!-- Hidden on all screen sizes -->
+    <div class="bg-secondary box d-none">
+      d-none (hidden on all devices)
+    </div>
+
+    <!-- Visible only on md and larger -->
+    <div class="bg-primary box d-none d-md-block">
+      d-none d-md-block (visible on md and above)
+    </div>
+
+    <!-- Visible only on lg and larger, flex display -->
+    <div class="bg-success box d-none d-lg-flex justify-content-center align-items-center">
+      d-none d-lg-flex (visible on lg and above, flex)
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

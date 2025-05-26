@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Local Storage Events</title>
+</head>
+<body>
+  <h2>Add Event (Saved Locally)</h2>
+
+  <form id="eventForm">
+    <label>
+      Event Name:
+      <input type="text" id="eventName" required />
+    </label><br><br>
+    
+    <label>
+      Seats:
+      <input type="number" id="eventSeats" required min="1" />
+    </label><br><br>
+
+    <button type="submit">Add Event</button>
+  </form>
+
+  <hr>
+  <h3>Saved Events:</h3>
+  <div id="eventList"></div>
+
+  <script src="question 10.js"></script>
+</body>
+</html>

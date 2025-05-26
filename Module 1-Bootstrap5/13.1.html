@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 13.1 - Dashboard Colors</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <style>
+    .card-box {
+      padding: 30px;
+      border-radius: 8px;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h2 class="text-center mb-5">Dashboard Overview</h2>
+
+    <div class="row g-4">
+      <!-- Users -->
+      <div class="col-md-3">
+        <div class="card-box bg-primary">
+          <h4>Users</h4>
+          <p class="fs-3">1,245</p>
+        </div>
+      </div>
+
+      <!-- Sales -->
+      <div class="col-md-3">
+        <div class="card-box bg-success">
+          <h4>Sales</h4>
+          <p class="fs-3">$12,300</p>
+        </div>
+      </div>
+
+      <!-- Warnings -->
+      <div class="col-md-3">
+        <div class="card-box bg-warning text-dark">
+          <h4>Warnings</h4>
+          <p class="fs-3">5</p>
+        </div>
+      </div>
+
+      <!-- Errors -->
+      <div class="col-md-3">
+        <div class="card-box bg-danger">
+          <h4>Errors</h4>
+          <p class="fs-3">2</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

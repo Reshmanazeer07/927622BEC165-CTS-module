@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 4.1 - Two Column Layout</title>
+  <!-- Bootstrap CSS (adjust the path if you're using local files) -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <style>
+    .sidebar {
+      background-color: #f1f1f1;
+      padding: 20px;
+      height: 100vh;
+    }
+    .content {
+      background-color: #e9ecef;
+      padding: 20px;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 sidebar">
+        <h4>Sidebar</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-md-9 content">
+        <h2>Main Content Area</h2>
+        <p>This is the content area. It takes up 75% width on medium and larger screens, and stacks under the sidebar on smaller screens.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

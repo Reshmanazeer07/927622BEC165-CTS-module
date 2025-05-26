@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 6.1 - Responsive Flex Navbar</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <style>
+    .custom-navbar {
+      background-color: #0d6efd;
+    }
+    .nav-link {
+      color: white;
+      padding: 10px 15px;
+    }
+    .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Flex-based responsive navbar -->
+  <nav class="d-flex flex-column flex-md-row justify-content-between align-items-center custom-navbar p-3">
+    <a class="nav-link" href="#">Home</a>
+    <a class="nav-link" href="#">About</a>
+    <a class="nav-link" href="#">Services</a>
+    <a class="nav-link" href="#">Contact</a>
+  </nav>
+
+  <!-- Bootstrap JS -->
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

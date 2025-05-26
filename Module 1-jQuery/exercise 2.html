@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercise 2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h1>Original Heading</h1>
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+    <button>Click to Hide Second Paragraph</button>
+
+    <script>
+        $(document).ready(function() {
+            // Change the text of the <h1>
+            $("h1").text("Updated Heading");
+
+            // Hide the second <p> when the button is clicked
+            $("button").click(function() {
+                $("p:eq(1)").hide(); // 0-based index, so this is the second <p>
+            });
+        });
+    </script>
+
+</body>
+</html>

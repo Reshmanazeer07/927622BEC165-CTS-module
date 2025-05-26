@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Health Seminar",
+    "date": "2025-07-01",
+    "category": "Wellness"
+  },
+  {
+    "name": "App Design Bootcamp",
+    "date": "2025-08-10",
+    "category": "Tech"
+  },
+  {
+    "name": "Music Jamming",
+    "date": "2025-09-05",
+    "category": "Entertainment"
+  }
+]
